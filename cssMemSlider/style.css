@@ -38,11 +38,17 @@ img {
 
 .controls {
     position: absolute;
-    bottom: 10px;
+    bottom: 0.7em;
     left: 70%;
     display: block;
     font-size: 0;
 }
+
+@media (max-width: 767px) {
+    .controls {
+        left: 40%;
+    }
+} 
 
 .contr {
     display: inline-block;
@@ -68,10 +74,23 @@ img {
 .li1 {
     display: block;
     width: 100%;
-    min-height: 200px;
     flex-shrink: 0;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+}
+
+.list2 {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+}
+  
+.li2 {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    color: white;
 }
 
 #toggle-1:checked ~ .controls > .contr[for="toggle-1"] {
